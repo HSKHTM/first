@@ -1,0 +1,65 @@
+(Generated with: DXF2GCODE, Version: Py3.6.7 PyQt5.11.3, Date: $Date: Thu Jan 3 16:29:29 2019 +0100 $)
+(Created from file: C:/Users/alaa/Desktop/dxf2gcode-20190103/dxf/3.dxf)
+(Output format description: G-CODE for LinuxCNC)
+(Time: Mon Dec 30 23:50:53 2019)
+G20 (Units in inches)
+G91 (Incremental programming)
+	G64 (Default cutting) G17 (XY plane) G40 (Cancel radius comp.) G49 (Cancel length comp.)
+G0 Z   0.000 
+T1 M6
+S6000
+G0 X  -3.536 Y  46.464
+M3 M8
+G0 Z  -0.472 
+F5
+G1 Z  -0.177
+F15
+G2 X   7.071 Y   7.071 I   3.536 J   3.536
+G2 X  -7.071 Y  -7.071 I  -3.536 J  -3.536
+F5
+G1 Z  -0.059
+F15
+G2 X   7.071 Y   7.071 I   3.536 J   3.536
+G2 X  -7.071 Y  -7.071 I  -3.536 J  -3.536
+F5
+G1 Z   0.236
+G0 Z   0.472 
+M9 M5
+G0 X  -6.464 Y -56.464
+M3 M8
+G0 Z  -0.472 
+G1 Z  -0.177
+F15
+G1 X  49.010 Y  15.594
+G3 X  -0.000 Y   3.812 I  -0.606 J   1.906
+G1 X -49.010 Y  15.594
+G1 X   0.000 Y   5.000
+G1 X  60.000 Y   0.000
+G1 X   0.000 Y -20.000
+G1 X  20.000 Y   0.000
+G1 X   0.000 Y  -5.000
+G1 X -20.000 Y   0.000
+G1 X   0.000 Y -20.000
+G1 X -60.000 Y   0.000
+G1 X   0.000 Y   5.000
+F5
+G1 Z  -0.059
+F15
+G1 X  49.010 Y  15.594
+G3 X  -0.000 Y   3.812 I  -0.606 J   1.906
+G1 X -49.010 Y  15.594
+G1 X   0.000 Y   5.000
+G1 X  60.000 Y   0.000
+G1 X   0.000 Y -20.000
+G1 X  20.000 Y   0.000
+G1 X   0.000 Y  -5.000
+G1 X -20.000 Y   0.000
+G1 X   0.000 Y -20.000
+G1 X -60.000 Y   0.000
+G1 X   0.000 Y   5.000
+F5
+G1 Z   0.236
+G0 Z   0.472 
+M9 M5
+G0 X  10.000 Y  10.000
+M2 (Program end)																									
