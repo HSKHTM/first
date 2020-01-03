@@ -93,6 +93,7 @@ class Window(QMainWindow):
 
         return (D)
 
+#### LAST UPDATE ######
 	def Switch_Code_Type(self,cmd,last_cmd):
 		if(cmd[0] == "g" or cmd[0] == "G"):
 			if(cmd[1] == "0" or cmd[1] == "01" or cmd[1] == "00" or cmd[1] == "1"):
@@ -110,7 +111,7 @@ class Window(QMainWindow):
 		else:
 			print(last_cmd)
 			return(last_cmd)
-
+#### END ######
     def Get_Line_Para(self,cmd, X_old, Y_old):
         x = X_old
         y = Y_old
