@@ -93,15 +93,23 @@ class Window(QMainWindow):
 
         return (D)
 
-    def Switch_Code_Type(self,code, num):
-        if (code == "X" or code == "Y"):
-            return "L_LINE"
-        if (code + num == "G01" or code + num == "G1" or code + num == "G00" or code + num == "G0"):
-            return "L_LINE"
-        if (code + num == "G02" or code + num == "G2"):
-            return "CW_ARC"
-        if (code + num == "G03" or code + num == "G3"):
-            return "CCW_ARC"
+	def Switch_Code_Type(self,cmd,last_cmd):
+		if(cmd[0] == "g" or cmd[0] == "G"):
+			if(cmd[1] == "0" or cmd[1] == "01" or cmd[1] == "00" or cmd[1] == "1"):
+				print("L_LINE")
+				return("L_LINE")
+			elif(cmd[1] == "2" or cmd[1] == "02"):
+				print("CW_ARC")
+				return("CW_ARC")
+			elif(cmd[1] == "3" or cmd[1] == "03"):
+				print("CCW_ARC")
+				return("CCW_ARC")
+			else:
+				print(last_cmd)
+				return(last_cmd)
+		else:
+			print(last_cmd)
+			return(last_cmd)
 
     def Get_Line_Para(self,cmd, X_old, Y_old):
         x = X_old
@@ -302,7 +310,7 @@ class Window(QMainWindow):
 
             ###take parameters from first line in CMD_LIST
             First_CMD = CMD_LIST[0]
-            Code_Type = self.Switch_Code_Type(First_CMD[0], First_CMD[1])
+            Code_Type = self.Switch_Code_Type(First_CMD,"L_LINE")
             X_old = X_new
             Y_old = Y_new
 
@@ -341,7 +349,7 @@ class Window(QMainWindow):
                 if (CMD[0] == ""):
                     continue
 
-                Code_Type = self.Switch_Code_Type(CMD[0], CMD[1])
+                Code_Type = self.Switch_Code_Type(CMD,Code_Type)
                 X_old = X_new
                 Y_old = Y_new
 
